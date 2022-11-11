@@ -1,6 +1,6 @@
 service-talk-booking-tests:
   stage: test
-  image: registry.gitlab.com/<your-gitlab-username>/talk-booking:cicd-python3.9-slim
+  image: registry.gitlab.com/estevelaguco/talk-booking:cicd-python3.9-slim
   before_script:
     - cd services/talk_booking/
     - poetry install
