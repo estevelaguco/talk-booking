@@ -4,6 +4,7 @@ service-talk-booking-code-quality:
   before_script:
     - cd services/talk_booking/
     - poetry install
+    - cp .* talk_booking/
   script:
     - poetry run flake8 .
     - poetry run black . --check
@@ -17,6 +18,7 @@ service-talk-booking-tests:
   before_script:
     - cd services/talk_booking/
     - poetry install
+    - cp .* talk_booking/
   script:
     - poetry run python -m pytest --junitxml=report.xml --cov=./ --cov-report=xml tests/unit tests/integration
   after_script:
